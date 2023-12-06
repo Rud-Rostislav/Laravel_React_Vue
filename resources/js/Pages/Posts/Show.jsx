@@ -18,7 +18,7 @@ export default function Show({auth, post}) {
                             <p>Text:</p>
                             <p>{post.text}</p>
                             <p>Created at:</p>
-                            <p>{post.created_at}</p>
+                            <p>{new Date(post.created_at).toLocaleString()}</p>
                             <p>Created by:</p>
                             <p>{post.user ? post.user.name : 'Unknown'}</p>
                             <Link

@@ -26,23 +26,16 @@ export default function Index({auth, posts: initialPosts}) {
                         {posts && posts.length > 0 ? (
                             posts.map((post) => (
                                 <div key={post.id} style={{
-                                    border: '1px solid black',
                                     padding: '10px',
                                     marginBottom: '20px',
                                     borderRadius: '10px',
                                     display: 'flex',
                                     flexDirection: 'column',
                                     gap: '10px',
+                                    boxShadow: '0 0px 10px 0 rgba(0, 0, 0, 0.2), 0 0px 10px 0 rgba(0, 0, 0, 0.15)',
                                 }}>
-                                    <p>ID: {post.id}</p>
-                                    <p>Title:</p>
                                     <p>{post.title}</p>
-                                    <p>Text:</p>
                                     <p>{post.text}</p>
-                                    <p>Created at:</p>
-                                    <p>{post.created_at}</p>
-                                    <p>Created by:</p>
-                                    <p>{post.user ? post.user.name : 'Unknown'}</p>
 
                                     <div className='py-4 flex justify-center gap-4'>
 
@@ -51,8 +44,8 @@ export default function Index({auth, posts: initialPosts}) {
                                             style={{
                                                 backgroundColor: '#6e4f00',
                                                 color: 'white',
-                                                padding: '10px',
-                                                borderRadius: '5px'
+                                                padding: '5px 10px',
+                                                borderRadius: '10px'
                                             }}
                                         >
                                             More
@@ -63,8 +56,8 @@ export default function Index({auth, posts: initialPosts}) {
                                             style={{
                                                 backgroundColor: '#00bbff',
                                                 color: 'white',
-                                                padding: '10px',
-                                                borderRadius: '5px'
+                                                padding: '5px 10px',
+                                                borderRadius: '10px'
                                             }}
                                         >
                                             Edit
@@ -81,10 +74,10 @@ export default function Index({auth, posts: initialPosts}) {
                                             <button
                                                 type="submit"
                                                 style={{
-                                                    backgroundColor: '#9a0000',
+                                                    backgroundColor: '#5b0000',
                                                     color: 'white',
-                                                    padding: '10px',
-                                                    borderRadius: '5px'
+                                                    padding: '5px 10px',
+                                                    borderRadius: '10px'
                                                 }}
                                             >
                                                 Delete

@@ -84,7 +84,7 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
                     </div>
                 )}
 
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 justify-center">
                     <PrimaryButton disabled={processing}>Save</PrimaryButton>
 
                     <Transition
