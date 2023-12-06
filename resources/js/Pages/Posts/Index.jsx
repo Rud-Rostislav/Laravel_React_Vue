@@ -20,7 +20,7 @@ export default function Index({auth, posts: initialPosts}) {
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div className="max-w-5xl mx-auto sm:px-6 lg:px-8">
                 <div className="overflow-hidden shadow-sm sm:rounded-lg">
                     <div className="p-6 text-gray-900 text-center">
                         {posts && posts.length > 0 ? (
@@ -29,18 +29,27 @@ export default function Index({auth, posts: initialPosts}) {
                                     border: '1px solid black',
                                     padding: '10px',
                                     marginBottom: '20px',
-                                    borderRadius: '10px'
+                                    borderRadius: '10px',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    gap: '10px',
                                 }}>
-                                    <p>{post.id}</p>
+                                    <p>ID: {post.id}</p>
+                                    <p>Title:</p>
                                     <p>{post.title}</p>
+                                    <p>Text:</p>
                                     <p>{post.text}</p>
+                                    <p>Created at:</p>
+                                    <p>{post.created_at}</p>
+                                    <p>Created by:</p>
+                                    <p>{post.user ? post.user.name : 'Unknown'}</p>
 
                                     <div className='py-4 flex justify-center gap-4'>
 
                                         <Link
                                             href={route('posts.show', {post: post.id})}
                                             style={{
-                                                backgroundColor: '#00bbff',
+                                                backgroundColor: '#6e4f00',
                                                 color: 'white',
                                                 padding: '10px',
                                                 borderRadius: '5px'
@@ -72,7 +81,7 @@ export default function Index({auth, posts: initialPosts}) {
                                             <button
                                                 type="submit"
                                                 style={{
-                                                    backgroundColor: '#00bbff',
+                                                    backgroundColor: '#9a0000',
                                                     color: 'white',
                                                     padding: '10px',
                                                     borderRadius: '5px'

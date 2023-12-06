@@ -8,7 +8,7 @@ Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
-        'posts' => \App\Models\Post::all(),
+        'posts' => \App\Models\Post::with('user')->get(),
     ]);
 });
 
