@@ -34,17 +34,17 @@ export default function Welcome({auth, posts}) {
                     )}
                 </div>
 
-                <div className="p-6 text-gray-900 text-center w-2/5">
+                <div className="p-6 text-gray-900 text-center mt-16 flex flex-wrap justify-center gap-12">
                     {posts && posts.length > 0 ? (
                         posts.map((post) => (
                             <div key={post.id} className='hover:scale-105 transition duration-200' style={{
                                 padding: '10px',
-                                marginBottom: '20px',
                                 borderRadius: '15px',
                                 display: 'flex',
                                 flexDirection: 'column',
                                 gap: '10px',
                                 boxShadow: '0 0px 5px 0 rgba(0, 0, 0, 0.2), 0 0px 10px 0 rgba(0, 0, 0, 0.15)',
+                                width: '30vw',
                             }}>
                                 <p>{post.title}</p>
                                 <p>{post.text}</p>

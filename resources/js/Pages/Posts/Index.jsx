@@ -22,16 +22,27 @@ export default function Index({auth, posts: initialPosts}) {
 
             <div className="max-w-5xl mx-auto sm:px-6 lg:px-8">
                 <div className="overflow-hidden shadow-sm sm:rounded-lg">
-                    <div className="p-6 text-gray-900 text-center">
+                    <div className="p-6 text-gray-900 text-center flex" style={
+                        {
+                            display: 'flex',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            gap: '20px',
+                            flexWrap: 'wrap'
+                        }
+                    }>
                         {posts && posts.length > 0 ? (
                             posts.map((post) => (
                                 <div key={post.id} style={{
                                     padding: '10px',
-                                    marginBottom: '20px',
                                     borderRadius: '10px',
                                     display: 'flex',
                                     flexDirection: 'column',
-                                    gap: '10px',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    width: '15vw',
+                                    height: '30vh',
                                     boxShadow: '0 0px 10px 0 rgba(0, 0, 0, 0.2), 0 0px 10px 0 rgba(0, 0, 0, 0.15)',
                                 }}>
                                     <p>{post.title}</p>

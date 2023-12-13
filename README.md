@@ -10,3 +10,7 @@ npm run dev
 
 Модель, міграція та контролер:
 php artisan make:model -mrc Post
+
+For fake posts Factory:
+php artisan make:factory PostFactory
+php artisan migrate:fresh --seed
